@@ -99,14 +99,21 @@
             let provider = document.getElementById('provider').value;
             let nominal = document.getElementById('nominal').value;
             let nophone = document.getElementById('nophone').value;
-            let win = window.open('https://api.whatsapp.com/send?phone=6289520688829&text=Nama'+'&nbsp &nbsp &nbsp &nbsp &nbsp'+nama+'\n'+'Provider'+'&nbsp &nbsp &nbsp &nbsp &nbsp'+provider+'\n'+'Nominal'+'&nbsp &nbsp &nbsp &nbsp &nbsp'+nominal+'\n'+'No Handphone'+'&nbsp &nbsp &nbsp &nbsp &nbsp'+nophone);
-            if (win) {
-            //Browser has allowed it to be opened
-            win.focus();
-            } else {
-        //Browser has blocked it
-             alert('Please allow popups for this website');
-            }
+              var url =
+              "https://wa.me/6289520688829?text=" +
+              "Name: " +
+              nama +
+              "%0a" +
+              "Provider: " +
+              provider +
+              "%0a" +
+              "Nominal: " +
+              nominal +
+              "%0a" +
+              "No Hp Pengguna: " +
+              nophone;
+
+            window.open(url, "_blank").focus();
             return false;
             });
         </script>
