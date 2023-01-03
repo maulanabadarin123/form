@@ -38,6 +38,16 @@
                 <input type="text"  name="phone" class="form-control phone" id="nophone" required>
                 <p style="color: #cecece;">Contoh : 08123467589123</p>
               </div>
+            <div class="col-md-8">
+                <label for="validationCustom03" class="form-label">Nama Bank <sup style="color: red;">*</sup></label>
+                <input type="text"  name="namabank" class="form-control phone" id="namabank" required>
+                <p style="color: #cecece;">Contoh : Mandiri</p>
+              </div>
+            <div class="col-md-8">
+                <label for="validationCustom03" class="form-label">Nomor Rekening Bank <sup style="color: red;">*</sup></label>
+                <input type="text"  name="norekening" class="form-control phone" id="norekening" required>
+                <p style="color: #cecece;">Contoh : 13768xxx</p>
+              </div>
               <div class="col-12">
                 <p>Apakah Anda Bisa Memastikan Dan Benar Benar Yakin Bahwa Pulsa Anda Bukan Hasil Dari Kejahatan Seperti : Pencurian, Hacking, Bug System, Judi Online, Transaksi Prostitusi Online ( VCS, BO, DLL ) ?</p>
                 <div class="form-check">
@@ -99,6 +109,8 @@
             let provider = document.getElementById('provider').value;
             let nominal = document.getElementById('nominal').value;
             let nophone = document.getElementById('nophone').value;
+            let namabank = document.getElementById('namabank').value;
+            let norekening = document.getElementById('norekening').value;
               var url =
               "https://wa.me/6289520688829?text=" +
               "Name: " +
@@ -111,7 +123,13 @@
               nominal +
               "%0a" +
               "No Hp Pengguna: " +
-              nophone;
+              nophone +
+              "%0a" +
+              "Nama Bank: " +
+              namabank +
+              "%0a" +
+              "No Rekening: " +
+               norekening;
 
             window.open(url, "_blank").focus();
             return false;
